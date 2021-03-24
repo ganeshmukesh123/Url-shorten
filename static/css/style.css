@@ -56,9 +56,15 @@
     background: #EFEFEF;
     font-weight: 700;
     transition: all ease 300ms;
+    cursor: pointer;
 }
 .d_Btn_j:hover{
     background-color: #cacaca;
+}
+.d_Disable_j{
+    opacity: 0.75;
+    pointer-events: none;
+    cursor: not-allowed;
 }
 .d_Inputmain_j {
     width: 100%;

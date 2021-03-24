@@ -22,10 +22,11 @@
                 <div class="d_Urlshortenbox_j">
                     <div class="d_Inputhead_j">
                         <div class="d_Inputbox_j">
-                            <input type="text" placeholder="Enter URL" class="d_Inputmain_j">
+                            {% csrf_token %}
+                            <input type="text" name="url" id="url" placeholder="Enter URL" class="d_Inputmain_j">
                         </div>
                         <div class="d_Inputbtn_j">
-                            <button class="d_Btn_j">Enter</button>
+                            <button id="shorten" class="d_Btn_j d_Enterbtn d_Disable_j">Enter</button>
                         </div>
                     </div>
                     <div class="d_Divider_j"></div>
@@ -43,4 +44,8 @@
         </div>
     </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="{% static 'js/constant.js' %}"></script>
+<script src="{% static 'js/helper.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
 </html>
