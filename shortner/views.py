@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 # from django.conf import settings
 import uuid
@@ -25,5 +25,6 @@ def create(request):
 
 def getActual(request):
     print('getActual')
-    return HttpResponse('getActual')
+    # return HttpResponse('getActual')
+    return redirect('https://www.djangoproject.com/')
 
