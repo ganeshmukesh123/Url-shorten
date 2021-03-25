@@ -1,7 +1,5 @@
 
 $('document').ready(function(){
-    var token = '{{csrf_token}}';
-    console.log(token);
     console.log("init");
 
     $(getId(URL_INPUT_ID)).on('keyup',function(){
@@ -13,9 +11,10 @@ $('document').ready(function(){
         }
     })
 
-    $(getId(ENTER_BTN_ID)).on('click',function(){
+    $(getId(ENTER_BTN_ID)).on('click',function(e){
+        e.preventDefault();
         var url = getUrl();
-        console.log(url);
+        // console.log(url);
         // makeApiRequest.endPoint;
         var formData = {
             url : url,
@@ -28,8 +27,10 @@ $('document').ready(function(){
                 postData : formData
             },
             function(data){
+                console.log(data);
             },
-            function(error){
+            function(err){
+                console.log(err);
             }
         )
     })

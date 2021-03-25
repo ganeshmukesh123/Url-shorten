@@ -20,15 +20,17 @@
         <div class="d_Middle_j">
             <div class="d_Container_j">
                 <div class="d_Urlshortenbox_j">
-                    <div class="d_Inputhead_j">
-                        <div class="d_Inputbox_j">
-                            {% csrf_token %}
-                            <input type="text" name="url" id="url" placeholder="Enter URL" class="d_Inputmain_j">
+                    <form>
+                        <div class="d_Inputhead_j">
+                            <div class="d_Inputbox_j">
+                                {% csrf_token %}
+                                <input type="text" name="url" id="url" placeholder="Enter URL" class="d_Inputmain_j">
+                            </div>
+                            <div class="d_Inputbtn_j">
+                                <button id="shorten" class="d_Btn_j d_Enterbtn d_Disable_j">Enter</button>
+                            </div>
                         </div>
-                        <div class="d_Inputbtn_j">
-                            <button id="shorten" class="d_Btn_j d_Enterbtn d_Disable_j">Enter</button>
-                        </div>
-                    </div>
+                    </form>
                     <div class="d_Divider_j"></div>
                     <div class="d_Body_j">
                         <p class="d_Shortentxt_j">Shorten URl is</p>

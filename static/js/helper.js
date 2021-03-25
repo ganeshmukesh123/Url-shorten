@@ -9,7 +9,7 @@ var makeApiRequest = (function(){
                 url: endPoint,
                 type: "GET",
                 success: function(results) {
-                    console.log(results);
+                    // console.log(results);
                     callback(results);
                 },
                 error: function(err) {
@@ -22,7 +22,7 @@ var makeApiRequest = (function(){
                 type: "POST",
                 data: postData,
                 success: function(results) {
-                    console.log(results);
+                    // console.log(results);
                     callback(results);
                 },
                 error: function(err) {
