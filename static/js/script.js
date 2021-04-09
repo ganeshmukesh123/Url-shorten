@@ -1,6 +1,7 @@
 
 $('document').ready(function(){
     console.log("init");
+    $(getId(URL_INPUT_ID)).focus();
 
     $(getId(URL_INPUT_ID)).on('keyup',function(){
         var url = getUrl();
@@ -28,6 +29,10 @@ $('document').ready(function(){
             },
             function(data){
                 console.log(data);
+                if(!!data && !!data['status'] && data['status']==="success"){
+                    $(getClass(RESULT_DIV))[0].textContent = data['data']['alias'];
+                    $(getId(OPEN_LINK)).attr('href',BASE_URL + data['data']['alias'])
+                }
             },
             function(err){
                 console.log(err);
